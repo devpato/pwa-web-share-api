@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+.navbar {
+  padding: 0 32px;
+  height: 10vh;
+  background-color: black;
+  color: white;
+}
+
+.navbar ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+ul li {
+  margin: 0 16px;
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 100%;
+}
+
+.share {
+  cursor: pointer;
+}
