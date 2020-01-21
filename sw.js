@@ -15,7 +15,6 @@ self.addEventListener("install", e => {
 });
 
 self.addEventListener("activate", event => {
-  //event.waitUntil(self.clients.claim());
   caches.keys().then(keyList => {
     return Promise.all(
       keyList.map(key => {
