@@ -3,12 +3,12 @@
   "name": "PWA Share API",
   "icons": [
     {
-      "src": "/icons/gps.png",
+      "src": "images/icons/gps.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icons/gps.png",
+      "src": "images/icons/gps.png",
       "type": "image/png",
       "sizes": "512x512"
     }
