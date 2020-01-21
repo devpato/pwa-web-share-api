@@ -7,12 +7,14 @@ function onShare() {
   const url = document.querySelector("link[rel=canonical]")
     ? document.querySelector("link[rel=canonical]").href
     : document.location.href;
+  const text = "Learn how to use the share api";
 
   if (navigator.share) {
     navigator
       .share({
         title,
-        url
+        url,
+        text
       })
       .then(() => {
         alert(`Thanks for Sharing!`);
@@ -27,7 +29,7 @@ function onShare() {
 
 function initializeApp() {
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./sw.js").then(() => {
+    navigator.serviceWorker.register("./../sw.js").then(() => {
       document.querySelector("#share").addEventListener("click", () => {
         onShare();
       });
