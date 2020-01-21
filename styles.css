@@ -16,18 +16,23 @@ body {
 }
 
 ul li {
-  margin: 0 16px;
+  padding: 0 16px;
   list-style-type: none;
 }
 
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 90vh;
   width: 100%;
 }
 
-.share {
+img {
+  width: 400px;
+}
+
+.i {
   cursor: pointer;
 }
