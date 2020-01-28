@@ -10,24 +10,24 @@ function onShare() {
   const text = "Learn how to use the share api";
 
   if (navigator.share) {
-    navigator
+    try {
+      await navigator
       .share({
         title,
         url,
         text
       })
-      .then(() => {
+      
         /*
           Show a message if the user share something
         */
         alert(`Thanks for Sharing!`);
-      })
-      .catch(err => {
-        /*
+    } catch (err) {
+       /*
           This error will appear if the user cancel the action of sharing.
         */
-        alert(`Couldn't share ${err}`);
-      });
+       alert(`Couldn't share ${err}`);
+    }
   } else {
     alert(`Not supported !!`);
   }
@@ -46,7 +46,7 @@ function initializeApp() {
         initializing things for the app, but having a service worker nor a PWA is needed
         to make use of the Web Share API. 
       */
-      document.querySelector("#share").addEventListener("click", () => {
+      document.querySelector("#share").addEventListener("click", async () => {
         onShare();
       });
     });
