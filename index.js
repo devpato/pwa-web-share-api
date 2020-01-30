@@ -2,7 +2,7 @@
 
 initializeApp();
 
-function onShare() {
+async function onShare() {
   const title = document.title;
   const url = document.querySelector("link[rel=canonical]")
     ? document.querySelector("link[rel=canonical]").href
@@ -46,9 +46,7 @@ function initializeApp() {
         initializing things for the app, but having a service worker nor a PWA is needed
         to make use of the Web Share API. 
       */
-      document.querySelector("#share").addEventListener("click", async () => {
-        onShare();
-      });
+      document.querySelector("#share").addEventListener("click", onShare);
     });
   }
 }
